@@ -77,6 +77,11 @@ a:hover {
   color: transparent;
 }
 
+img {
+  max-width: 100%;
+  display: inline;
+}
+
 ul[role="list"] {
   list-style: none;
 }
