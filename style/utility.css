@@ -22,7 +22,6 @@
 .container {
   --max-width: 375px;
   width: min(var(--max-width), 100% - var(--px-lg) * 2);
-  border: solid red;
   margin-inline: auto;
 }
 
@@ -43,6 +42,14 @@
 
 .flex {
   display: flex;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.gap-1\.5 {
+  gap: 1.5rem;
 }
 
 .gap-1 {
