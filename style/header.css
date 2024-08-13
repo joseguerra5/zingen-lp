@@ -2,4 +2,31 @@ header {
   & a:first-child {
     margin-right: auto;
   }
+
+  .logo {
+    gap: 1rem;
+    
+    & span{
+      display: flex;
+      font: 400 1.5rem/1.4 "Lilita One", sans-serif;
+      flex-wrap: nowrap;
+    }
+    & img {
+      width: 2rem;
+      transition: transform .5s ease;
+      &:hover {
+        transform: rotate(90deg);
+        
+      }
+    }
+  }
+
+}
+
+@media (width >= 80em) {
+  .logo {
+    & span{
+      font: 400 2rem/1.4 "Lilita One", sans-serif;
+    }
+  }
 }

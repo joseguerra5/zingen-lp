@@ -3,6 +3,10 @@
   border: 1px solid var(--stroke-color);
   border-radius: 1.5rem;
 
+  & .img-32 {
+    width: 2rem;
+  }
+
   & h3 {
     margin-top: 1rem;
   }

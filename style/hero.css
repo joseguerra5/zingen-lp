@@ -1,9 +1,11 @@
 #hero{
   text-align: center;
 
-  & img[src*="music"] {
+  & img[src*="Logo"] {
     width: 12.875rem;
+
   }
+
 
   & p{
     font: var(--fw-md) var(--fs-lg)/1.4 var(--font-family);
@@ -21,6 +23,10 @@
   }
 }
 
+#smartphones-img {
+  position: relative;
+
+}
 @media (width >= 80em) {
   #hero {
     background: url(../assets/bg-hero-desktop.svg) no-repeat bottom center/contain;
