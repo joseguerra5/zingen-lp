@@ -2,12 +2,23 @@
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 1.5rem;
+  position: relative;
+  
+  & .machine {
+    position: absolute;
+    width: 2
+  }
+
+  & .machine{
+    position: absolute;
+    right: 10;
+  }
 
   & .img-32 {
     width: 2rem;
   }
 
   & h3 {
-    margin-top: 1rem;
+    margin-block: 1rem .5rem;
   }
 }

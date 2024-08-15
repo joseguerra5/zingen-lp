@@ -1,11 +1,10 @@
 #hero{
   text-align: center;
 
-  & img[src*="Logo"] {
-    width: 12.875rem;
+  & div img[src*="Logo"] {
+    width: 8rem;
 
   }
-
 
   & p{
     font: var(--fw-md) var(--fs-lg)/1.4 var(--font-family);
@@ -29,10 +28,10 @@
 }
 @media (width >= 80em) {
   #hero {
-    background: url(../assets/bg-hero-desktop.svg) no-repeat bottom center/contain;
+    background: url(../assets/bg-hero-desktop.svg) no-repeat bottom center/cover;
     padding-bottom: 15rem;
-    & img[src*="music"] {
-      width: 25.75rem;
+    & div img[src*="Logo"] {
+      width: 12rem;
     }
     & h1 {
       margin-top: 1.5rem;

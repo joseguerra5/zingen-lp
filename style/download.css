@@ -3,16 +3,41 @@
   & .card {
     padding: 3rem 1.5rem 15rem;
     position: relative;
+    
     & > img {
       position: absolute;
       bottom: 0;
       right: -3.5rem;
+    }
+
+    & div p span {
+      display: flex;
+      margin-block: .5rem;
+      color: var(--brand-color-primary);
     }
   }
 
   .buttons {
     flex-wrap: wrap;
     margin-top: 2rem;
+
+    & a {
+      gap: 1rem;
+      
+      &:hover{
+        & img {
+          content: url(../assets/icons/whatsapp-hover.svg);
+        }
+      }
+      & img {
+        width: 2rem;
+
+      }
+
+      &:hover {
+        color: var(--brand-color-primary--text-color-primary);
+      }
+    }
   }
 
   @media (width >= 80em){

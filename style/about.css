@@ -4,4 +4,8 @@
   & .even-columns {
     gap: 2rem;
   }
+
+  & div header {
+    margin-block: .5rem;
+  }
 }
