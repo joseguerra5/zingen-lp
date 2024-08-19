@@ -11,8 +11,12 @@
 
     & img.desktop-only{
       position: absolute;
-      max-width: 15rem;
+      max-width: 25rem;
       filter: drop-shadow(1rem 1rem 4rem rgba(0, 0, 0, 0.349));
+    }
+
+    & p {
+      color: var(--text-color-secondary);
     }
   }
 
@@ -27,8 +31,9 @@
         max-width: 16rem;
       }
     & .desktop-only{
-      bottom: 2rem;
-      right: 2rem;
+      bottom: -1rem;
+      right: -4rem;
+      transform: rotate(30deg);
     }
   }
 
@@ -45,8 +50,9 @@
       margin-left: auto;
     }
     & .desktop-only{
-      bottom: 2rem;
-      left: 2rem;
+      width: 24rem;
+      bottom: -3rem;
+      left: -3rem;
     }
   }
 
@@ -59,8 +65,9 @@
 
     }
     & .desktop-only{
-      top: 2rem;
-      right: 2rem;
+      top: -3rem;
+      right: 0rem;
+      rotate: 180deg;
     }
   }
 }
