@@ -1,5 +1,6 @@
 #hero{
   text-align: center;
+  padding-top: 3rem;
 
   & div img[src*="Logo"] {
     width: 8rem;
@@ -31,7 +32,7 @@
     background: url(../assets/bg-hero-desktop.svg) no-repeat bottom center/cover;
     padding-bottom: 15rem;
     & div img[src*="Logo"] {
-      width: 12rem;
+      width: 10rem;
     }
     & h1 {
       margin-top: 1.5rem;

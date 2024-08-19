@@ -1,8 +1,9 @@
 #header {
   position: fixed;
   width: 100%;
-
+  background-color: black;
   z-index: +2;
+  margin-bottom: 2rem;
   & a:first-child {
     margin-right: auto;
   }
