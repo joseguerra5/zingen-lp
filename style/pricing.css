@@ -1,115 +1,217 @@
 #pricing {
---fs-price: 2rem;
+  --fs-price: 3rem;
+
+  padding-block: 5rem;
+  background: #05070d;
 
   & header {
     text-align: center;
+    margin-bottom: 3rem;
   }
 
+  /* GRID */
   & .cards {
-    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    justify-content: center;
   }
 
-  
-  & h3 {
-    font-size: 1.25rem;
-    margin-top: 0;
-  }
-
-  & .card p {
-    margin-top: .25rem;
-  }
-
-  & zin-pricing {
-    display: block;
-    padding-block: 1.5rem;
-    font: var(--fw-bold) var(--fs-price)/1.2 var(--font-family);
-  }
-
-  & zin-pricing small {
-    font: var(--fw-base) 1rem/1.25 var(--font-family);
-    color: var(--text-color-secondary);
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  & .separator {
-    height: 2px;
-    margin-block: 2rem;
-    background: radial-gradient(var(--text-color-secondary), var(--surface-color) 70% );
-  }
-
-  & li {
-    color: var(--text-color-secondary);
-    background: url(../assets/icons/Check.svg) no-repeat;
-    padding-left: 2rem;
-    padding-bottom: .5rem;
-  }
-
-  & ul + small {
-    display: block;
-    margin-top: 1.5rem;
-    font-size: 0.875rem;
-    color: var(--text-color-secondary);
-  }
-
-  & .premium {
+  /* CARD */
+  & .card {
     position: relative;
 
-    & .card {
+    width: 100%;
+    max-width: 315px;
+    height: 470px;
 
-      padding-top: 6.25rem;
-      & span {
-        position: absolute;
-        top: -2px;
-        left: -2px;
+    background: #0d1118;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-        padding: 0.75rem 2rem;
-        background: var(--brand-gradient);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
 
-        border-top-left-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
+    overflow: hidden;
 
-        font: 600 var(--fs-sm)  var(--font-family);
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--background-color);
+    transition: transform 250ms ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    /* IMAGEM */
+    & .image-wrapper {
+      height: 150px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-bottom: 1rem;
+
+      & img {
+        max-width: 220px;
+        max-height: 120px;
+        object-fit: contain;
       }
     }
 
-    padding: 2px;
+    /* TÍTULO */
+    & h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 0;
+      color: #fff;
+    }
 
-    &::before {
-      content: "";
-      background: var(--brand-gradient);
-      position: absolute;
-      inset: 0;
-      border-radius: 1.5rem;
-      z-index: -1;
+    /* DESCRIÇÃO */
+    & p {
+      margin-top: .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,.72);
+
+      min-height: 70px;
     }
   }
 
-  @media (width >= 80em) {
+  /* PREÇO */
+  & zin-pricing {
+    display: block;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    font-size: var(--fs-price);
+    font-weight: 700;
+    line-height: 1;
+
+    color: #fff;
+  }
+
+  & zin-pricing small {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,.65);
+    vertical-align: super;
+  }
+
+  /* BOTÃO */
+  & .btn {
+    width: 100%;
+    height: 48px;
+
+    border-radius: .75rem;
+    border: 1px solid rgba(255,255,255,.35);
+
+    background: transparent;
+    color: #fff;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    transition: .2s ease;
+
+    &:hover {
+      background: rgba(255,255,255,.06);
+    }
+  }
+
+  /* DIVIDER */
+  & .separator {
+    height: 1px;
+    margin-block: 1.5rem;
+
+    background: rgba(255,255,255,.08);
+  }
+
+  /* LISTA */
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: .85rem;
+  }
+
+  & li {
+    list-style: none;
+
+    color: rgba(255,255,255,.72);
+    font-size: .95rem;
+
+    background: url("../assets/icons/Check.svg")
+      no-repeat left center;
+
+    background-size: 18px;
+
+    padding-left: 2rem;
+  }
+
+  /* CARD DESTACADO */
+  & .premium {
+    position: relative;
+    padding: 2px;
+    border-radius: 1.5rem;
+
+    background: linear-gradient(
+      135deg,
+      #2155ff,
+      #2de2ff
+    );
+
+    & .card {
+      border: none;
+      background: #0d1118;
+    }
+
+    /* BADGE SUPERIOR */
+    & span {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 180px;
+      height: 42px;
+
+      display: flex;
+      align-items: center;
+
+      padding-left: 1.5rem;
+
+      background: linear-gradient(
+        90deg,
+        #2563ff,
+        #2ce6ff
+      );
+
+      border-top-left-radius: 1.5rem;
+      border-bottom-right-radius: 2rem;
+
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+
+      color: #000;
+      z-index: 2;
+    }
+  }
+
+  /* RESPONSIVO */
+  @media (max-width: 1200px) {
+    & .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    & .cards {
+      grid-template-columns: 1fr;
+    }
+
+    & .card {
+      max-width: 100%;
+      height: auto;
+    }
+
     --fs-price: 2.5rem;
-    & header {
-      max-width: 50em;
-      margin-inline: auto;
-    }
-
-    & .premium .card {
-      padding-bottom: 6rem;
-    }
-
-    & .card:nth-child(3) .separator{
-      margin-block: 1.5rem;
-    }
-
-    .btn-md{
-      padding: .75rem 1.5rem;
-      font-size: var(--fs-base);
-    }
-    
   }
 }
-
