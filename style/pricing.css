@@ -8,6 +8,8 @@
   & .cards {
     margin-top: 2rem;
   }
+
+  
   & h3 {
     font-size: 1.25rem;
     margin-top: 0;
@@ -110,3 +112,4 @@
     
   }
 }
+

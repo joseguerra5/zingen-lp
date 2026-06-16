@@ -3,11 +3,14 @@
   & .card {
     padding: 3rem 1.5rem 15rem;
     position: relative;
+    overflow: hidden;
     
     & > img {
       position: absolute;
       bottom: 0;
-      right: -3.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20rem;
     }
 
     & div p span {
@@ -43,6 +46,13 @@
   @media (width >= 80em){
     .card{
       padding: 9.75rem 5rem;
+
+       & > img {
+        left: none;
+        transform: translateX(0);
+        right: -5.5rem;
+        width: 40rem;
+      }
 
       & > div:nth-child(1){
         max-width: 40rem;
